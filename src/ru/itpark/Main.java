@@ -17,5 +17,7 @@ public class Main {
         service.add(new House(4,22_500, "Казань, Приволжскийй район ул.", "9/12", 50, "..."));
 
         System.out.println(service.getSorted(new PriceComparator()));
+        System.out.println(service.searchHouseByPrice(service.getSorted(new PriceComparator())));
+        System.out.println(service.searchHouseByDistrict(service.getSorted(new PriceComparator())));
     }
 }
