@@ -1,6 +1,5 @@
 package ru.itpark.service;
 
-import ru.itpark.domain.District;
 import ru.itpark.domain.House;
 import ru.itpark.repository.Repository;
 
@@ -45,13 +44,11 @@ public class Service {
         return result;
     }
 
-    public List<House> searchHouseByDistrict(List<House> houseList) {
-
-        District districts = new District("Кировский", "Вахитовский");
-
+    public List<House> searchHouseByDistrict(List<House> districts) {
         List<House> results = new ArrayList<>();
-        for (House house : houseList) {
-            if (house.getAdress() .contains(districts.getDistrict2())){
+
+        for (House house : repository.getAll()) {
+            if (districts.contains(house.getAdress())){
                 results.add(house);
             }
         }

@@ -5,6 +5,8 @@ import ru.itpark.domain.House;
 import ru.itpark.repository.Repository;
 import ru.itpark.service.Service;
 
+import java.util.ArrayList;
+
 public class Main {
     public static void main(String[] args) {
         Service service = new Service(
@@ -18,6 +20,9 @@ public class Main {
 
         System.out.println(service.getSorted(new PriceComparator()));
         System.out.println(service.searchHouseByPrice(service.getSorted(new PriceComparator())));
+        ArrayList<String> districts = new ArrayList<>();
+        districts.add("Вахитовский");
+        districts.add("Привожский");
         System.out.println(service.searchHouseByDistrict(service.getSorted(new PriceComparator())));
     }
 }
