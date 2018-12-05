@@ -1,6 +1,5 @@
 package ru.itpark.repository;
 
-import ru.itpark.domain.District;
 import ru.itpark.domain.House;
 
 import java.util.ArrayList;
