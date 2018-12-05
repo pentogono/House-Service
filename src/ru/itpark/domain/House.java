@@ -4,7 +4,7 @@ public class House {
     private int id;
     private int price;
     private String adress;
-    private  String floor;
+    private String floor;
     private int apartmentArea;
     private String apartmentDescription;
 
